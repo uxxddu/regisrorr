@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #F8F8F8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .image-container {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #DDDDDD;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #8BC34A;
+            outline: none;
+        }
+
+        .password-container {
+            position: relative;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-item input[type="checkbox"],
+        .agree-container input[type="checkbox"] {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #DDDDDD;
+            margin-right: 10px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .checkbox-item input[type="checkbox"]:checked,
+        .agree-container input[type="checkbox"]:checked {
+            background-color: #8BC34A;
+            border-color: #8BC34A;
+        }
+
+        .checkbox-item input[type="checkbox"]:checked::after,
+        .agree-container input[type="checkbox"]:checked::after {
+            content: "\2713"; /* علامة الصح */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 16px;
+        }
+
+        .forgot-password {
+            color: #8BC34A;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .agree-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #8BC34A;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #7CB342;
+        }
+
+        .signup-prompt {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #808080;
+        }
+
+        .signup-prompt a {
+            color: #8BC34A;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-container">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWqHupJVFCpLzPhg6nyzleAEuxunq2NcQWygHAfnIrJGiycqLM_OTyRDnDZydopk7qIKTFdXmOKb-2RTWjscK9V_RLSKqdlTcrz44Xz13mvR4l4OK9eBw8qLiwCmV-QRmBaJfYZwv-HNUgVNEOgXdA_X_Mewrca1h7IwrsO7mink7AmyznJswORXIH/s750/login-bg.8ab48c5.png" alt="Delivery Rider">
+    </div>
+
+    <form>
+        <label for="phone">Phone number</label>
+        <input type="text" id="phone" placeholder="Enter mobile number" required>
+
+        <label for="password">Password</label>
+        <div class="password-container">
+            <input type="password" id="password" placeholder="Enter Password" required>
+        </div>
+
+        <div class="checkbox-container">
+            <div class="checkbox-item">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember Me</label>
+            </div>
+            <a href="#" class="forgot-password">Forgot Password?</a>
+        </div>
+
+        <div class="agree-container">
+            <input type="checkbox" id="agree" required>
+            <label for="agree">Yes, I have read and agreed to the agreement, including the user agreement privacy policy</label>
+        </div>
+
+        <button type="submit">Login</button>
+
+        <div class="signup-prompt">
+            <p>Don't Have An Account? <a href="register.html">Sign Up</a></p> <!-- رابط لصفحة إنشاء حساب -->
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
